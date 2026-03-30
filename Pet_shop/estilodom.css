@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    position: relative; /* Necessário para o fundo funcionar */
+    
+}
+
+/* Criando o fundo que fica só do lado ESQUERDO */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%; /* Ocupa metade da tela na esquerda */
+    height: 100%;
+    background-image: url('https://img.freepik.com/fotos-premium/um-cachorro-com-um-grande-sorriso-no-rosto_653449-1594.jpg?size=626&ext=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Fica atrás de tudo */
+    opacity: 1;  /* Aqui a imagem fica nítida! */
+}
+/* Container Principal */
+.petshop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Joga tudo para a DIREITA */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+#container ,blockquote{
+  box-shadow: 0 0 15px 5px(0,0,25,0.5)inset;
+    color: rgb(212, 94, 14);
+    box-shadow: 5px 5px 8px 8px #f3ca1388;
+    font-size: 20px;
+    font-family: cursive;
+    
+ 
+}
+/* Título Principal Vermelho */
+#titulo {
+    color: crimson !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px white;
+}
+
+/* Blockquote como estava */
+#container, blockquote {
+    color: rgb(212, 94, 14);
+    box-shadow: 5px 5px 8px 8px #f3ca1388;
+    font-size: 20px;
+    font-family: cursive;
+    margin: 20px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+}
+
+/* Layout para jogar as seções para a direita */
+.conteudo-flex {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; /* Joga o conteúdo para a direita */
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.secoes-direita {
+    width: 45%; /* Ocupa quase metade da tela na direita */
+    margin-right: 5%;
+    text-align: left; /* Texto alinhado à esquerda dentro do card */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos das Sections em Laranja */
+section h1 {
+    color: rgb(212, 94, 14) !important;
+    text-align: left;
+    font-size: 24px;
+    border-bottom: 1px solid #f3ca13;
+}
+
+section p, section li {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Ajustes de lista */
+ul {
+    list-style-type: "🐾 ";
+    padding-left: 20px;
+}
+
+/* Configuração Geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+}
+
+#titulo {
+    color: crimson;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    margin: 0;
+    background: white;
+}
+
+/* Estrutura de Duas Colunas */
+.layout-principal {
+    display: flex;
+    flex-wrap: wrap; /* Para funcionar bem no celular */
+    min-height: 80vh;
+}
+
+/* Coluna da Esquerda (Imagem) */
+.coluna-imagem {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.coluna-imagem img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Coluna da Direita (Texto) */
+.coluna-conteudo {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos Específicos */
+#container, blockquote {
+    color: rgb(212, 94, 14);
+    box-shadow: 5px 5px 8px 0px #f3ca1388;
+    font-size: 18px;
+    font-family: cursive;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.titulo-laranja {
+    color: rgb(212, 94, 14) !important;
+    font-size: 22px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+section p, li {
+    color: #444;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: "🐾 ";
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    clear: both;
+}
